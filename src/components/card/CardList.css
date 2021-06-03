@@ -1,0 +1,33 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-end;
+}
+
+.itens {
+    list-style: none;
+    align-self: center;
+    flex: 0 0 21%;
+    margin: 0 auto;
+}
+
+.image-size {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-bottom: 3px red solid;
+}
+
+.child-list {
+    align-items: center;
+    flex-direction: column;
+}
+
+.heroInfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
