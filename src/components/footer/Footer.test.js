@@ -5,8 +5,3 @@ test('renders correctly', () =>{
     const utils = render(<Footer/>)
     expect(utils.container).toMatchSnapshot()
 });
-
-test('should render div', () => {
-    const utils = render(<Footer><div className="foo"/></Footer>)
-    expect(utils.firstChild.classList.contains('foo')).toBeTruthy()
-})
