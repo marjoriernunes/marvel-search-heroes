@@ -1,11 +1,13 @@
-import './SearchBar.css'
+import './SearchBar.css';
+import Icon from '../../assets/Icons';
 
 const SearchBar = (props) => {
     return (
-        <div>
+        <div className="left-inner-addon">
+            <Icon name="ic_busca" width="20px" height="20px"/>
             <input 
                 type="text" 
-                placeholder="Pesquisaê" 
+                placeholder="Procure por heróis" 
                 onChange={(event) => {props.sendData(event.target.value)}}
             />
         </div>

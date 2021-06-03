@@ -5,6 +5,11 @@ exports[`renders correctly 1`] = `
   <div
     class="App"
   >
+    <img
+      alt="Marvel Search Heroes"
+      class="App-logo"
+      src="logo.svg"
+    />
     <h1
       class="title"
     >
@@ -15,23 +20,62 @@ exports[`renders correctly 1`] = `
     >
       Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aqueles que você descobrirá em breve!
     </p>
-    <div>
+    <div
+      class="left-inner-addon"
+    >
+      <svg
+        height="20px"
+        width="20px"
+      >
+        <use
+          xlink:href="icons.svg#icon-ic_busca"
+        />
+      </svg>
       <input
-        placeholder="Pesquisaê"
+        placeholder="Procure por heróis"
         type="text"
       />
     </div>
-    <div>
-      <p>
+    <section
+      class="options-bar"
+    >
+      <p
+        class="horoes-found"
+      >
         Encontramos undefined heróis
       </p>
-      <button>
-        Ordernar por nome - A/Z
-      </button>
+      <div>
+        <svg
+          height="27"
+          width="18"
+        >
+          <use
+            xlink:href="icons.svg#icon-ic_heroi"
+          />
+        </svg>
+        <span>
+          Ordernar por nome - A/Z
+        </span>
+        <div
+          class="wrg-toggle wrg-toggle--checked"
+        >
+          <div
+            class="wrg-toggle-container"
+          />
+          <div
+            class="wrg-toggle-circle"
+          />
+          <input
+            aria-label="Toggle Button"
+            class="wrg-toggle-input"
+            type="checkbox"
+          />
+        </div>
+      </div>
       <button>
         Somente favoritos
       </button>
-    </div>
+    </section>
     <div>
       <ul
         class="container"
