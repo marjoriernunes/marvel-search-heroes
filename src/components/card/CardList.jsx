@@ -5,7 +5,6 @@ import Icon from '../../assets/Icons'
 
 const CardList = (props) => {
     const [itemSelected, setItem] = react.useState(null);
-    
     if (props.itens?.length === 0) {
       return <ErrorScreen />
     } else {

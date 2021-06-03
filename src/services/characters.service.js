@@ -1,11 +1,13 @@
 import api from './base/api';
 
-const charactersApi = async (searchTerm) => {
+const charactersApi = async (searchTerm, order) => {
     const params = {
-        nameStartsWith: searchTerm
+        nameStartsWith: searchTerm,
+        orderBy: order
     }
+    
     if (searchTerm === '') {
-        const {data} = await api.get('v1/public/characters');
+        const {data} = await api.get('v1/public/characters', {params: {orderBy: order}});
         return {
             copyright: {
                 text: data.copyright,
