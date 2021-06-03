@@ -29,6 +29,7 @@ function App() {
         <div>
           <p>{`Encontramos ${charactersInitial?.heroes.length} ${charactersInitial?.heroes.length === 1 ? 'herói' : 'heróis'}`}</p>
           <button onClick={() => {orderChoosed === 'name' ? setOrder('-name') : setOrder('name')}}>Ordernar por nome - A/Z</button>
+          <button>Somente favoritos</button>
         </div>
         <Home>
           <CardList itens={charactersInitial?.heroes}/>

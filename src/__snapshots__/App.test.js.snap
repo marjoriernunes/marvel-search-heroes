@@ -28,6 +28,9 @@ exports[`renders correctly 1`] = `
       <button>
         Ordernar por nome - A/Z
       </button>
+      <button>
+        Somente favoritos
+      </button>
     </div>
     <div>
       <ul
