@@ -1,7 +1,7 @@
 import react from 'react';
 import './CardList.css';
-import ErrorScreen from  '../pages/Error/Error';
-import Favorite from '../favorite/Favorite';
+import ErrorScreen from  '../../pages/Error/Error';
+import Icon from '../../assets/Icons'
 
 const CardList = (props) => {
     const [itemSelected, setItem] = react.useState(null);
@@ -18,7 +18,7 @@ const CardList = (props) => {
                     <img className="image-size" alt={item.name} src={`${item.thumbnail.path}.${item.thumbnail.extension}`} />
                       <div className="heroInfo">
                         <p>{item?.name}</p>
-                        <Favorite sendFav={itemSelected}/>
+                        <Icon name="favorito_02" width="20px" height="20px"/>
                       </div>
                 </li>
               ))}

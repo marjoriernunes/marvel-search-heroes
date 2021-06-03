@@ -8,5 +8,5 @@ test('renders correctly', () =>{
 
 test('should render div', () => {
     const utils = render(<Footer><div className="foo"/></Footer>)
-    expect(utils.classList.contains('foo')).toBeTruthy()
+    expect(utils.firstChild.classList.contains('foo')).toBeTruthy()
 })

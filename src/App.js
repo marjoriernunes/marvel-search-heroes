@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import react from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import SearchBar from './components/searchbar/SearchBar';
+import Footer from './components/footer/Footer';
+import Home from './pages/Home/Home';
+import CardList from './components/card/CardList';
+import CharactersApi from './services/characters.service';
 
 function App() {
+  const [charactersInitial, charactersResponse] = react.useState(null);
+  const [searchElement, setSearchElement] = react.useState('');
+
+  react.useEffect(() => {
+  
+    const charactersRequest = async () => { 
+      const data = await CharactersApi(searchElement)
+      charactersResponse(data)
+    }
+    charactersRequest();
+  
+  }, [searchElement])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Header/>
+        <SearchBar dataToFilter={charactersInitial?.heroes} sendData={(value) => {setSearchElement(value)}}/>
+        <Home>
+          <CardList itens={charactersInitial?.heroes}/>
+        </Home>
+        <Footer />
+      </div>
   );
 }
 
