@@ -3,15 +3,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-content: center;
-    align-items: flex-end;
 }
 
 .itens {
     list-style: none;
-    align-self: center;
-    flex: 0 0 21%;
-    margin: 0 auto;
+    align-items: flex-start;
+    flex: 0 0 19%;
+    margin: 0;
+    padding: 0 2rem 2rem;
 }
 
 .image-size {
@@ -30,4 +29,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.heroInfo p {
+    max-width: 80%;
+}
+
+@media (max-width: 1110px) {
+    .container {
+        justify-content: space-around;
+    }
 }
