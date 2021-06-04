@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://gateway.marvel.com/',
+    baseURL: 'https://gateway.marvel.com/',
     params: {
         ts: 1,
         apikey: '499974688adf9774fd80b9afb553ebb1',
