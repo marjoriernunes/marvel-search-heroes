@@ -5,6 +5,11 @@ import Icon from '../../assets/Icons'
 
 const CardList = (props) => {
     const [itemSelected, setItem] = react.useState(null);
+
+    const clicou = () => {
+      console.log('caiu no golpe', itemSelected);
+    }
+
     if (props.itens?.length === 0) {
       return <ErrorScreen />
     } else {

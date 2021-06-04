@@ -9,6 +9,5 @@ test('renders correctly', () =>{
 
 test('should render children', () => {
     const utils = render(<Home>foo</Home>)
-    utils.debug()
     expect(utils.getByText('foo')).toBeTruthy()
 })

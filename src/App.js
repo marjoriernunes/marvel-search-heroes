@@ -34,24 +34,31 @@ function App() {
   }, [searchElement, orderChoosed]);
 
   return (
+    <> 
       <div className="App">
         <img className="App-logo" src={MarvelLogo} alt="Marvel Search Heroes"/>
         <Header/>
         <SearchBar dataToFilter={charactersInitial?.heroes} sendData={(value) => {setSearchElement(value)}}/>
         <section className="options-bar">
           <p className="horoes-found">{`Encontramos ${charactersInitial?.heroes.length} ${charactersInitial?.heroes.length === 1 ? 'herói' : 'heróis'}`}</p>
-          <div>
-            <Icon name="ic_heroi" width="18" height="27"/>
-            <span>Ordernar por nome - A/Z</span>
-            <ToggleButton onChange={state => orderByName(state)} defaultChecked={true} />
-          </div>
-          <button>Somente favoritos</button>
+            <div className="options">
+              <div>
+                <Icon name="ic_heroi" width="18" height="27"/>
+                <span className="options-text toggle">Ordernar por nome - A/Z</span>
+                <ToggleButton onChange={state => orderByName(state)} defaultChecked={true} />
+              </div>
+              <div className="spacing">
+                <Icon name="favorito_01" width="20" height="20"/>
+                <p className="options-text favorites">Somente favoritos</p>
+              </div>
+            </div>
         </section>
         <Home>
           <CardList itens={charactersInitial?.heroes}/>
         </Home>
-        <Footer />
       </div>
+      <Footer />
+    </>
   );
 }
 

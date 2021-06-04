@@ -6,3 +6,8 @@ test('renders correctly', () =>{
     expect(utils.container).toMatchSnapshot()
 });
 
+test('renders a error message', () => {
+    const { getByText } = render(<ErrorScreen/>)
+    expect(getByText('Oooops! Seu herói não foi encontrado :(')).toBeInTheDocument()
+});
+

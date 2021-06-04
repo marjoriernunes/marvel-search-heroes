@@ -2,8 +2,11 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <p>
+  <p
+    class="text-warning"
+  >
     Oooops! Seu herói não foi encontrado :(
+     
   </p>
 </div>
 `;
