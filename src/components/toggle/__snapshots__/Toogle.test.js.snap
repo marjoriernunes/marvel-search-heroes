@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="wrg-toggle"
+  >
+    <div
+      class="wrg-toggle-container"
+    />
+    <div
+      class="wrg-toggle-circle"
+    />
+    <input
+      aria-label="Toggle Button"
+      class="wrg-toggle-input"
+      type="checkbox"
+    />
+  </div>
+</div>
+`;

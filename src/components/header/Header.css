@@ -1,0 +1,11 @@
+.title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #404040;
+    margin: 0;
+}
+
+.subtitle {
+    color: #8c8c8c;
+    margin: 0;
+}
