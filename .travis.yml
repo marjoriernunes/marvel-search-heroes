@@ -1,7 +1,4 @@
 language: node_js
-os:
-- linux
-dist: xenial
 node_js:
 - '12'
 script:
@@ -11,7 +8,6 @@ deploy:
   provider: heroku
   app: marvel-search-heroes
   on:
-    repo: marjoriernunes/marvel-search-heroes
     branch: main
   api_key:
     secure: OvdliB2gdtkjzQpPYvVibYRVbg+9q1hGVwAJt8nL8nV2dQUV2+Qj+u7JxSmPhv2r4fwwg+FZKT1o4UbE2Ch71tw/YwO9LZS41tkYojaetW3dBzHQ4qxf4AQ/nNTdKJs5Iq6gbdoNzMgDrImqHp7KzlTyN9OWYnOl54traM++N/OrnOzC/xDm886riPFwxJXRckr4bFrEW1TRd/Yo2r3ccNBjJwcSlqevc0mfKPGPhKxpmKKPrPiYj5IV34/xrUot1E715p6odJwrCskh1spyNhXtNx09JJ97UzDM6m+OItemxuBmarLIiuAj033TcUWGNZ20SHFM+6FwGow901O+b0OMJJdTB7ZJcnoY4XD9KyRL/wILwmRErzksdmPVW1YmglNxpImXy8xhj9uRY3O1Pw4unOzvVcYqStskIpUH/YciLmMfNDAz6kRJwc4PqFTaEUc/foXQBr/pmwX34dodGJE30KRfg9sag7vJiPPDT1V3Kww5YmYZz9GYLI+JEoK42mEJqMB3koBwb/Bpu6Ckk14kIRIPZdr3xYsmJf51/Ss1smHpFez6D8wtJsizmxnNM1yhoFwy8Ig+0+C1sCx2vuxgEnpGP4uvEn7hWtMZII7a/z8nQAlmro8iUGriUHrKb3IIgf6VArnYyIuqZIaueNqwcqXyOsjGih5oCpHmkwI=
