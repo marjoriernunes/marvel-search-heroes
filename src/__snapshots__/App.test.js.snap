@@ -3,11 +3,11 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="App"
+    class="home"
   >
     <img
       alt="Marvel Search Heroes"
-      class="App-logo"
+      class="home-logo"
       src="logo.svg"
     />
     <h1
@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
       Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aqueles que você descobrirá em breve!
     </p>
     <div
-      class="left-inner-addon"
+      class="left-icon home-search"
     >
       <svg
         height="20px"
@@ -96,11 +96,9 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
     </section>
-    <div>
-      <ul
-        class="container"
-      />
-    </div>
+    <ul
+      class="container"
+    />
   </div>
   <div
     class="footer-bar"

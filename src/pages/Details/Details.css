@@ -1,0 +1,17 @@
+.header-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-page {
+    background-color: #f2f2f2;
+}
+
+.details-page section {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.footer-bar {
+    margin-top: 6rem;
+}

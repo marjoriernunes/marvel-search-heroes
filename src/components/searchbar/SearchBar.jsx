@@ -3,7 +3,7 @@ import Icon from '../../assets/Icons';
 
 const SearchBar = (props) => {
     return (
-        <div className="left-inner-addon">
+        <div className={`left-icon ${props.styleClass}`}>
             <Icon name="ic_busca" width="20px" height="20px"/>
             <input 
                 type="text" 

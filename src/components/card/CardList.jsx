@@ -1,13 +1,16 @@
 import react from 'react';
 import './CardList.css';
 import ErrorScreen from  '../../pages/Error/Error';
-import Icon from '../../assets/Icons'
+import Icon from '../../assets/Icons';
+import { useHistory } from 'react-router-dom';
 
 const CardList = (props) => {
     const [itemSelected, setItem] = react.useState(null);
-
-    const clicou = () => {
-      console.log('caiu no golpe', itemSelected);
+    const history = useHistory();
+    
+    const details = (item) => {
+      setItem(item);
+      return history.push(`/hero/${item.id}`)
     }
 
     if (props.itens?.length === 0) {
@@ -18,7 +21,7 @@ const CardList = (props) => {
           <ul className="container">
             {props.itens?.map(item => 
               (
-                <li className="itens" key={item?.id} onClick={() => setItem(item)}>
+                <li className="itens" key={item?.id} onClick={() => details(item)}>
                     <img className="image-size" alt={item.name} src={`${item.thumbnail.path}.${item.thumbnail.extension}`} />
                       <div className="heroInfo">
                         <p>{item?.name}</p>

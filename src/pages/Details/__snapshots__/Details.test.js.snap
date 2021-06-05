@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="details-page"
+  >
+    <section
+      class="header-details"
+      id="header"
+    >
+      <img
+        alt="Marvel Search Heroes"
+        class="home-logo"
+        src="logo_menor.svg"
+      />
+      <div
+        class="left-icon details-search"
+      >
+        <svg
+          height="20px"
+          width="20px"
+        >
+          <use
+            xlink:href="icons.svg#icon-ic_busca"
+          />
+        </svg>
+        <input
+          placeholder="Procure por heróis"
+          type="text"
+        />
+      </div>
+    </section>
+    <section
+      class="header-details"
+      id="character-content"
+    >
+      <div>
+        <h2>
+          NAME
+        </h2>
+        <svg
+          height="20px"
+          width="20px"
+        >
+          <use
+            xlink:href="icons.svg#icon-favorito_01"
+          />
+        </svg>
+      </div>
+      <div>
+        IMAGE
+      </div>
+    </section>
+    <section
+      id="character-comics"
+    >
+      <div>
+        COMIC BOOKS
+      </div>
+    </section>
+    <div
+      class="footer-bar"
+    />
+  </div>
+</div>
+`;
