@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div>
+    <svg
+      height="20px"
+      width="20px"
+    >
+      <use
+        xlink:href="icons.svg#icon-favorito_02"
+      />
+    </svg>
+  </div>
+</div>
+`;
