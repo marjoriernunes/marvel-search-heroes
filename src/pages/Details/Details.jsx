@@ -7,6 +7,15 @@ import { useParams } from 'react-router-dom';
 import react from 'react';
 import CharacterDetails from '../../services/character-detail.service';
 
+
+const ComicsList = (props) => {
+    return (
+        <>
+           {JSON.stringify(props)}
+        </>
+    );
+}
+
 const Details = () => {
     const [detailList, setDetailList] = react.useState(null);    
     const params = useParams();
@@ -37,12 +46,11 @@ const Details = () => {
                         {detailList?.name}
                         <Icon name="favorito_01" width="20px" height="20px"/>
                     </div>
-                    <div>
-                        IMAGE
-                    </div>
                 </section>
                 <section id="character-comics">
-                    <div>COMIC BOOKS</div>
+                <ul className="container">
+                    <ComicsList data={detailList}/>
+                </ul>
                 </section>
                 <Footer className="footer-bar"/>
             </div>
