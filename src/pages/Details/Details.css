@@ -1,17 +1,31 @@
-.header-details {
-    display: flex;
-    flex-direction: row;
-}
-
 .details-page {
     background-color: #f2f2f2;
 }
 
 .details-page section {
-    text-align: center;
-    margin: 0 2rem;
+    margin: 0 3rem;
+}
+
+.details-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.details-header img {
+    margin-right: 4rem;
 }
 
 .footer-bar {
     margin-top: 6rem;
+}
+
+@media (max-width: 750px) {
+    .details-header {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0 0;
+    }
 }
