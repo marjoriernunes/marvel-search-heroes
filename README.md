@@ -5,7 +5,8 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-acesse-o-projeto">Acesse o projeto</a>
 </p>
 
 ## 💻 Sobre o projeto
@@ -68,6 +69,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 👨‍💻 Acesse o projeto
 
 -   **[URL Pública](https://marvel-search-heroes.herokuapp.com/)**
+
+---
 
 Feito com ❤️ por Marjorie Nunes 👋🏽 [Entre em contato!](https://www.linkedin.com/in/marjoriernunes/)
 
