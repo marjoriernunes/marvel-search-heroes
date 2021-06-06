@@ -30,13 +30,12 @@ const Details = () => {
         const comicsRequest = async () => {
             const data = await CharacterService.heroListComics(params.id);
             setComicList(data);
-            console.log(data);
         }
         comicsRequest();
     }, [])
     
     const searchData = () => {
-        console.log('pesquisou');
+        backHome();
     }
 
     const backHome = () => {
