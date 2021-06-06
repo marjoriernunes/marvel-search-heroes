@@ -3,12 +3,12 @@ import Header from '../../components/header/Header';
 import SearchBar from '../../components/searchbar/SearchBar';
 import Footer from '../../components/footer/Footer';
 import CardList from '../../components/card/CardList';
-import CharactersApi from '../../services/characters.service';
 import Icon from '../../assets/Icons';
 import MarvelLogo from '../../assets/logo.svg';
 import ToggleButton from '../../components/toggle/Toggle';
 import './Home.css';
 import react from 'react';
+import CharacterService from '../../services/character.service';
 
 const Home = () => {
     const [charactersInitial, charactersResponse] = react.useState(null);
@@ -26,7 +26,7 @@ const Home = () => {
     react.useEffect(() => {
 
         const charactersRequest = async () => { 
-        const data = await CharactersApi(searchElement, orderChoosed)
+        const data = await CharacterService.heroList(searchElement, orderChoosed)
         charactersResponse(data)
         }
         charactersRequest();

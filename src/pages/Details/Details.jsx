@@ -5,7 +5,7 @@ import SearchBar from '../../components/searchbar/SearchBar';
 import Footer from '../../components/footer/Footer';
 import { useParams } from 'react-router-dom';
 import react from 'react';
-import CharacterDetails from '../../services/character-detail.service';
+import CharacterService from '../../services/character.service';
 
 
 const ComicsList = (props) => {
@@ -23,7 +23,7 @@ const Details = () => {
     react.useEffect(() => {
 
         const detailsRequest = async () => {
-            const data = await CharacterDetails(params.id)
+            const data = await CharacterService.heroListDetails(params.id)
             setDetailList(data.info[0]);
         }
         detailsRequest();
