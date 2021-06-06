@@ -8,6 +8,5 @@ test('renders correctly', () =>{
     CharacterService.getFavorites.mockReturnValueOnce([]);
     CharacterService.heroList.mockResolvedValueOnce([characterMock]);
     const utils = render(<Home/>)
-    utils.debug()
     expect(utils.container).toMatchSnapshot()
 });
