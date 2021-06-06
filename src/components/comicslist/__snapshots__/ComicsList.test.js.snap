@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h2>
+    Últimos lançamentos
+  </h2>
+  <ul
+    class="container-comic"
+  />
+</div>
+`;

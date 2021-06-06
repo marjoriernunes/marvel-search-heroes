@@ -27,7 +27,7 @@ const ToggleButton = ( props ) => {
     }, className);
 
     return (
-        <div onClick={triggerToggle} className={toggleClasses}>
+        <div data-testid="toggle-div" onClick={triggerToggle} className={toggleClasses}>
             <div className="wrg-toggle-container">
             </div>
             <div className="wrg-toggle-circle"></div>

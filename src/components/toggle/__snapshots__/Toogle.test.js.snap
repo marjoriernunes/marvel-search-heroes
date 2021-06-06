@@ -4,6 +4,7 @@ exports[`renders correctly 1`] = `
 <div>
   <div
     class="wrg-toggle"
+    data-testid="toggle-div"
   >
     <div
       class="wrg-toggle-container"
