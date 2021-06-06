@@ -5,6 +5,7 @@ const Favorite = (props) => {
     const [marked, setMarked] = useState(props.marked);
     const changeFav = () => {
         if(props.favoritedAmout === 5 && !marked) {
+            alert('Hey! Você já favoritou a quantidade máxima permitida! Caso queira, desvaforite algum herói e adicione este a sua lista do coração :)')
             return;
         }
         setMarked(!marked);

@@ -37,7 +37,7 @@ const Details = () => {
     }, [])
     
     const searchData = () => {
-        console.log('caiu na pesquisa');
+        console.log('pesquisou');
     }
 
     if(detailList === null) {
