@@ -7,13 +7,15 @@ import Icon from '../../assets/Icons';
 import MarvelLogo from '../../assets/logo.svg';
 import ToggleButton from '../../components/toggle/Toggle';
 import './Home.css';
-import react from 'react';
+import { useState, useEffect } from 'react';
 import CharacterService from '../../services/character.service';
 
 const Home = () => {
-    const [charactersInitial, charactersResponse] = react.useState(null);
-    const [searchElement, setSearchElement] = react.useState('');
-    const [orderChoosed, setOrder] = react.useState('name');
+    const [charactersInitial, charactersResponse] = useState(null);
+    const [searchElement, setSearchElement] = useState('');
+    const [orderChoosed, setOrder] = useState('name');
+    const [onlyFavorites, setOnlyFavorites] = useState(false);
+    const [favoriteArrayList, setFavoriteArrayList ] = useState([]); 
 
     const orderByName = (state) => {
         if (!!state) {
@@ -23,8 +25,13 @@ const Home = () => {
         }
     }
 
-    react.useEffect(() => {
+    const favoritesList = () => {
+        setOnlyFavorites(!onlyFavorites);
+        const favorites =  CharacterService.getFavorites();
+        setFavoriteArrayList(favorites);
+    }
 
+    useEffect(() => {
         const charactersRequest = async () => { 
         const data = await CharacterService.heroList(searchElement, orderChoosed)
         charactersResponse(data)
@@ -47,13 +54,13 @@ const Home = () => {
                         <span className="options-text toggle">Ordernar por nome - A/Z</span>
                         <ToggleButton onChange={state => orderByName(state)} defaultChecked={true} />
                     </div>
-                    <div className="spacing">
+                    <div className="spacing" onClick={favoritesList}>
                         <Icon name="favorito_01" width="20" height="20"/>
-                        <p className="options-text favorites">Somente favoritos</p>
+                        <p className="options-text favorites">{onlyFavorites ? 'Ver todos heróis' : 'Somente favoritos'}</p>
                     </div>
                     </div>
                 </section>
-                <CardList itens={charactersInitial?.heroes}/>
+                <CardList itens={onlyFavorites ? favoriteArrayList : charactersInitial?.heroes}/>
             </div>
             <Footer className="footer-bar"/>
         </>
