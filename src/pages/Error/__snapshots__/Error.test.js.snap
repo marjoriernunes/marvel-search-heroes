@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   <p
     class="text-warning"
   >
-    Oooops! Seu herói não foi encontrado :(
+    Oooops! A S.H.I.E.L.D não localizou nenhum herói com este nome em nosso banco de dados :(
      
   </p>
 </div>

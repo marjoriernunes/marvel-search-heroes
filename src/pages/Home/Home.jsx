@@ -47,7 +47,7 @@ const Home = () => {
                 <Header/>
                 <SearchBar styleClass="home-search" sendData={(value) => {setSearchElement(value)}}/>
                 <section className="options-bar">
-                <p className="horoes-found">{`Encontramos ${charactersInitial?.heroes.length} ${charactersInitial?.heroes.length === 1 ? 'herói' : 'heróis'}`}</p>
+                <p className="horoes-found">{`Encontramos ${charactersInitial?.heroesAmount} ${charactersInitial?.heroes.length === 1 ? 'herói' : 'heróis'}`}</p>
                     <div className="options">
                     <div>
                         <Icon name="ic_heroi" width="18" height="27"/>
