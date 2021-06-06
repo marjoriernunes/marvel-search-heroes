@@ -33,6 +33,16 @@ export default class CharacterService {
         return { info: data.data.results };
     }
 
+    static async heroListComics(id) {
+        const params = {
+            orderBy: '-onsaleDate',
+            limit: 10
+        }
+
+        const { data } = await api.get(`v1/public/characters/${id}/comics`, {params});
+        return { comics: data.data.results }
+    }
+
     static addFavorite(hero) {
         const favorites = JSON.parse(localStorage.getItem('heroesList')) || [];
         if(favorites.find(item => item.id === hero.id)) {

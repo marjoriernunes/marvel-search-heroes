@@ -4,24 +4,20 @@ import Logo from '../../assets/logo_menor.svg';
 import SearchBar from '../../components/searchbar/SearchBar';
 import Footer from '../../components/footer/Footer';
 import { useParams } from 'react-router-dom';
-import react from 'react';
 import CharacterService from '../../services/character.service';
+import useFavorite from '../../hooks/useFavorite/useFavorite';
+import Favorite from '../../components/favorite/Favorite';
+import ComicsList from '../../components/comicslist/ComicsList';
+import { useEffect, useState } from 'react';
 
-
-const ComicsList = (props) => {
-    return (
-        <>
-           {JSON.stringify(props)}
-        </>
-    );
-}
 
 const Details = () => {
-    const [detailList, setDetailList] = react.useState(null);    
+    const {favoritedAmout, addFavorite, removeFavorite} = useFavorite();
+    const [detailList, setDetailList] = useState(null);    
+    const [comicList, setComicList] = useState([]);
     const params = useParams();
 
-    react.useEffect(() => {
-
+    useEffect(() => {
         const detailsRequest = async () => {
             const data = await CharacterService.heroListDetails(params.id)
             setDetailList(data.info[0]);
@@ -29,33 +25,44 @@ const Details = () => {
         detailsRequest();
     }, []);
 
-    console.log('resposta da api', detailList, detailList?.name);
+    useEffect(() => {
+        const comicsRequest = async () => {
+            const data = await CharacterService.heroListComics(params.id);
+            setComicList(data);
+        }
+        comicsRequest();
+    }, [])
     
-    const teste = () => {
+    const searchData = () => {
         console.log('caiu na pesquisa');
     }
-    return (
-        <>
-            <div className="details-page">
-                <section className="details-header">
-                    <img src={Logo} alt="Marvel Search Heroes"/>
-                    <SearchBar styleClass="details-search" sendData={(value) => {teste(value)}}/>
-                </section>
-                <section id="character-content" className="header-details">
-                    <div>
-                        {detailList?.name}
-                        <Icon name="favorito_01" width="20px" height="20px"/>
-                    </div>
-                </section>
-                <section id="character-comics">
-                <ul className="container">
-                    <ComicsList data={detailList}/>
-                </ul>
-                </section>
-                <Footer className="footer-bar"/>
-            </div>
-        </>
-    );
+    
+    if(detailList === null) {
+        return <p>Carregando...</p>
+    } else {
+        return (
+            <>
+                <div className="details-page">
+                    <section className="details-header">
+                        <img src={Logo} alt="Marvel Search Heroes"/>
+                        <SearchBar styleClass="details-search" sendData={(value) => {searchData(value)}}/>
+                    </section>
+                    <section id="character-content" className="header-details">
+                        <div>
+                            {detailList?.name}
+                            <Favorite marked={CharacterService.isFavorite(detailList)} favoritedAmout={favoritedAmout} favValue={(shouldFavorite) => {shouldFavorite ? addFavorite(detailList) : removeFavorite(detailList)}}/>
+                        </div>
+                    </section>
+                    <section id="character-comics">
+                    <ul className="container">
+                        <ComicsList data={comicList.comics}/>
+                    </ul>
+                    </section>
+                    <Footer className="footer-bar"/>
+                </div>
+            </>
+        );
+    }
 }
 
 export default Details;

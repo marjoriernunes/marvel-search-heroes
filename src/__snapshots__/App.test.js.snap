@@ -63,6 +63,7 @@ exports[`renders correctly 1`] = `
           </span>
           <div
             class="wrg-toggle wrg-toggle--checked"
+            data-testid="toggle-div"
           >
             <div
               class="wrg-toggle-container"
