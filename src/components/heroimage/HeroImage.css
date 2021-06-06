@@ -1,0 +1,72 @@
+.gradient-overlay {
+    position: relative;
+}
+
+.gradient-overlay ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(133deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    opacity: 0.7;
+}
+
+.gradient-overlay img {
+    filter: grayscale(1);
+}
+
+.header-hero-info {    
+    position: relative;
+    text-align: center;
+}
+
+.header-hero-info img{
+    width: 100%;
+    background: cover;
+    height: 500px;
+    object-fit: cover;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    width: 50%;
+    text-align: left;
+    color: #e4e4e4;
+}
+
+.hero-name {
+    font-size: xxx-large;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    border-bottom: 3px solid #e4e4e4;
+}
+
+.hero-description {
+    margin: 1rem;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+@media (max-width: 860px) {
+    .top-left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .top-left {
+        position: relative;
+        top: 8px;
+        width: 100%;
+        text-align: left;
+        color: #404040;
+    }
+
+    .hero-name {
+        border-bottom: 3px solid #404040;
+    }
+}

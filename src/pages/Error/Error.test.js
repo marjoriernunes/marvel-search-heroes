@@ -8,6 +8,6 @@ test('renders correctly', () =>{
 
 test('renders a error message', () => {
     const { getByText } = render(<ErrorScreen/>)
-    expect(getByText('Oooops! Seu herói não foi encontrado :(')).toBeInTheDocument()
+    expect(getByText('Oooops! A S.H.I.E.L.D não localizou nenhum herói com este nome em nosso banco de dados :(')).toBeInTheDocument()
 });
 

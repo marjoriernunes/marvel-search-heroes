@@ -1,72 +1,76 @@
-# Marvel Search Heroes Website
+<h4 align="center"> 
+	Marvel Search Heroes 🦸
+</h4>
 
-# Getting Started with Create React App
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-acesse-o-projeto">Acesse o projeto</a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💻 Sobre o projeto
 
-## Available Scripts
+Marvel Search Heroes - é uma SPA que lista os personagens do universo Marvel com detalhes sobre suas aparições nos quadrinhos.
 
-In the project directory, you can run:
+### ⚙️ Funcionalidades
 
-### `npm start`
+- [x] Busca pelo nome dos heróis;
+- [x] Listagem em ordem alfabética (crescente | decrescente);
+- [x] Favoritar e Desfavoritar heróis;
+- [x] Filtrar apenas por heróis favoritos;
+- [x] Listagem de heróis persistente entre sessões.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Como executar o projeto
 
-### `npm test`
+### Pré-requisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Antes de começar, você vai precisar ter instalado em sua máquina o [Node.js](https://nodejs.org/en/), na versão 12.x.
 
-### `npm run build`
+#### 🧭 Rodando a aplicação web [Frontend]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Clone este repositório
+$ git clone https://github.com/marjoriernunes/marvel-search-heroes.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd marvel-search-heroes
 
-### `npm run eject`
+# Instale as dependências
+$ npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠 Tecnologias
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As seguintes ferramentas foram usadas na construção do projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### **Website**  ([React](https://reactjs.org/))
 
-### Code Splitting
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[Travis CI](https://travis-ci.com/)**
+-   **[Heroku](https://www.heroku.com/)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> Veja o arquivo  [package.json](https://github.com/marjoriernunes/marvel-search-heroes/blob/main/package.json)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 👨‍💻 Acesse o projeto
 
-### Making a Progressive Web App
+-   **[URL Pública](https://marvel-search-heroes.herokuapp.com/)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+Feito com ❤️ por Marjorie Nunes 👋🏽 [Entre em contato!](https://www.linkedin.com/in/marjoriernunes/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

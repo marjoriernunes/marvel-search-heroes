@@ -2,21 +2,15 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <div
-    class="left-icon undefined"
-  >
+  <div>
     <svg
       height="20px"
       width="20px"
     >
       <use
-        xlink:href="icons.svg#icon-ic_busca"
+        xlink:href="icons.svg#icon-favorito_02"
       />
     </svg>
-    <input
-      placeholder="Procure por heróis"
-      type="text"
-    />
   </div>
 </div>
 `;

@@ -1,0 +1,75 @@
+.home {
+    text-align: center;
+    margin: 0 2rem;
+  }
+
+  .horoes-found {
+    color: #b1b1b1;
+    font-weight: 600;
+    font-size: larger;
+  }
+  
+  .options-bar {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0 2rem;
+  }
+  
+  .options {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .options div {
+    align-items: center;
+    display: flex;
+  }
+  
+  .options-text {
+    color: #F36d6d;
+    font-weight: 700;
+  }
+  
+  .toggle {
+    margin: .5rem 1.7rem .5rem 1rem;
+  }
+  
+  .favorites {
+    margin: .5rem;
+  }
+  
+  .spacing {
+    margin-left: 2rem;
+  }
+  
+  .home-logo {
+    margin: 2rem 0 1rem;
+  }
+
+  .footer-bar {
+    margin-top: 6rem;
+  }
+  
+  @media (max-width: 842px) {
+    .options-bar {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      margin: 0 2rem;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+    .options div {
+      align-items: center;
+      display: flex;
+    }
+    .spacing {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
