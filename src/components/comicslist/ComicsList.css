@@ -3,7 +3,7 @@ h2 {
     margin-bottom: 5rem;
 }
 
-.container {
+.container-comic {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -28,12 +28,12 @@ h2 {
     font-weight: 700;
 }
 
-@media (max-width: 1050px) {
-    .container {
+@media (max-width: 1280px) {
+    .container-comic {
         justify-content: center;
     }
 
     .comic {
-        margin: 0 1rem;
+        margin: 0 1rem 3rem;
     }
 }

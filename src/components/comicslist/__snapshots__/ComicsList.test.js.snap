@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
     Últimos lançamentos
   </h2>
   <ul
-    class="container"
+    class="container-comic"
   />
 </div>
 `;

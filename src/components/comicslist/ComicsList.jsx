@@ -4,7 +4,7 @@ const ComicsList = (props) => {
     return (
         <>
             <h2>Últimos lançamentos</h2>
-            <ul className="container">
+            <ul className="container-comic">
                 {props.data?.map((comic, index) => 
                    ( 
                         <li key={index} className="comic">
